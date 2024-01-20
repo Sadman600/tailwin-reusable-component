@@ -1,21 +1,21 @@
 import cn from "../../utils/cn";
 import { getBtnColor, getVariant } from "../../utils/btn";
-
-const Buttons = (props, { ...rest }, { children }) => {
+import { forwardRef } from "react";
+type TRef = HTMLButtonElement;
+const Buttons = forwardRef<TRef>((props, ref) => {
+  const { className, textLevel, variant, color, ...rest } = props;
   return (
     <>
       <button
         {...rest}
-        className={cn(
-          getVariant(props.variant),
-          getBtnColor(props.color),
-          props.className
-        )}
+        ref={ref}
+        className={cn(getVariant(variant), getBtnColor(color), className)}
       >
-        {props.textLevel} {children}
+        {textLevel}
+        {/* {children} */}
       </button>
     </>
   );
-};
+});
 
 export default Buttons;
