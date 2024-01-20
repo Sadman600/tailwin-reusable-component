@@ -3,17 +3,17 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
+/* @layer base {
   h1 {
     @apply text-4xl;
     @apply text-cyan-700;
   }
-}
+} */
 
-@layer utilities {
+/* @layer utilities {
   btn-secondary {
     background-color: tomato;
     padding: 4px;
     border-radius: 50%;
   }
-}
+} */

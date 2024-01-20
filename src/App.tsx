@@ -14,7 +14,10 @@ function App() {
         <Button label="add me" className="btn-primary" />
         <Button label="Save changes" className="btn-primary" /> */}
         <Buttons
-          variantOutline={true}
+          textLevel="Click me!"
+          className="w-[500px]"
+          // color="success"
+          variant="outlined"
           // forceHover={true}
         />
       </Container>

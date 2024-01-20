@@ -1,19 +1,18 @@
 import cn from "../../utils/cn";
+import { getBtnColor, getVariant } from "../../utils/btn";
 
-const Buttons = (props) => {
+const Buttons = (props, { ...rest }, { children }) => {
   return (
     <>
       <button
+        {...rest}
         className={cn(
-          "px-4 py-4 bg-red-700 rounded-lg",
-          {
-            " bg-white border-solid border-2 border-indigo-900":
-              props.variantOutline,
-          },
+          getVariant(props.variant),
+          getBtnColor(props.color),
           props.className
         )}
       >
-        Click
+        {props.textLevel} {children}
       </button>
     </>
   );
